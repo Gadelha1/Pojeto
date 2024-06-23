@@ -1,62 +1,204 @@
-
-#nav1{
-
-    width: 100%;
-    background-color: rgba(86, 223, 120, 0.623);
-    list-style-type: none;
-    /* nav do topo */
+html {
+    scroll-behavior: smooth;
 }
-#h1{
+
+/* Estilos globais */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: darkseagreen;
+}
+
+/* Navbar */
+#nav1 {
+    width: 100%;
+    background-color: darkseagreen;
+    list-style-type: none;
+}
+
+nav {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 10px 0;
+    border-bottom: 3px solid rgb(60, 151, 60);
+    
+}
+
+/* Links da Navbar */
+a {
+    color: rgba(29, 23, 23, 0.76);
+    font-size: 15px;
+    border-radius: 5px;
+    padding: 10px;
+    text-decoration: none;
+}
+
+a:hover {
+    background-color: rgba(34, 139, 34, 0.623);
+    padding: 10px;
+}
+
+/* Estilos de títulos e parágrafos */
+#h1 {
     margin-top: 10px;
     margin-left: 10px;
-    font-size: x-large;
-       /* Titulo Inicial da tag Main  */
+    font-size: xx-large;
+    font-style: oblique;
 }
-#p1{
+
+#h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#p1, #p2 {
     margin-left: 25px;
 }
-#p2{
-    margin-left: 50px;
+
+#p2 {
     text-decoration: solid;
     font-size: x-large;
 }
 
-nav{
-    display: flex;
-    justify-content: space-evenly;
-    box-sizing: border-box;
-    width: 100%;
-    border-bottom: 1px solid grey;
-    /*Nav geral*/
+/* Estilos do corpo e seções */
+body {
+    background-color: rgba(0, 100, 0, 0.541);
 }
 
-a{
+section {
+    width: 100%;
+    background-color: rgba(143, 188, 143, 0.623);
+    padding: 60px;
+    align-content: center;
+}
+
+#section2 {
+    background-color: rgba(143, 188, 143, 0.507);
+    justify-content: center;
+    border-top: 2px solid darkgreen;
+}
+
+/* Estilos para artigos e imagens */
+article {
+    margin-bottom: 40px; /* Espaço entre seções */
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+    padding: 10px;
+}
+
+.gallery img {
+    width: 100%; /* Garante que a imagem ocupe a largura da coluna */
+    height: auto; /* Mantém a proporção da imagem */
+    object-fit: cover;
+    margin: 0;
+}
+.gallery figure {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+figcaption {
+    margin-top: 5px;
+    font-size: 0.9em;
+    color: #555;
+}
+/* Estilos para o campo de texto */
+textarea {
+    width: 90%; /* Ajuste para caber dentro do figure */
+    height: 50px; /* Altura do campo de texto */
+    margin-top: 5px;
+    padding: 5px;
+    resize: vertical; /* Permite ajustar a altura do campo */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 0.9em;
+    font-family: inherit; /* Mantém a fonte do contexto */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .gallery {
+        grid-template-columns: repeat(2, 1fr); /* Mantém pelo menos 2 colunas */
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery {
+        grid-template-columns: repeat(2, 1fr); /* Mantém pelo menos 2 colunas */
+    }
+}
+#back-to-top-btn {
+    display: none; /* Inicialmente oculto */
+    position: fixed;
+    bottom: 50px;
+    right: 20px;
+    background-color: #646665bd;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    line-height: 40px;
+    text-align: center;
+    cursor: pointer;
+    z-index: 1000; /* Garante que fique acima de outros elementos */
+}
+
+#back-to-top-btn:hover {
+    background-color: #0ead1be0;
+}
+footer {
+    background-color: azure;
+    width: 100%;
+    height: 40px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: solid 2px darkgreen;
+}
+
+#year-nav-footer ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center; /* Centraliza verticalmente os itens */
+}
+
+#year-nav-footer li {
+    margin: 0 5px; /* Espaçamento entre os itens */
+}
+
+#year-nav-footer a {
+    text-decoration: none;
     color: rgba(29, 23, 23, 0.76);
     font-size: 15px;
     border-radius: 5px;
-    padding: 10x 10px;
-    list-style-type: none;
-    text-decoration: none;
+    padding: 10px 15px;
+    display: block; /* Para ocupar toda a largura disponível */
 }
-a:hover{
+
+#year-nav-footer a:hover {
     background-color: rgba(34, 139, 34, 0.623);
-    height: fit-content;  
 }
-section{
-    width: 100%;
-    background-color: azure;
+articleFim{
+    text-align: center;
+    border-top: 2px solid rgba(92, 94, 92, 0.74);
 }
-#section2{
-    background-color: azure;
-    justify-content: center;
-}
-footer{
-    border-top: solid rgba(32, 189, 66, 0.747) 2px;
-    background-color: azure;
-    width: 100%;
-    height: 50px;
-    position: absolute;
-    bottom: 0;
-    left: 0;
+h3{
+    align-items: center;
     text-align: center;
 }
